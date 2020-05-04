@@ -15,7 +15,7 @@ export default class Main extends Sprite {
   private _appInfo: AppInfoService;
   private _platform: Platform;
   private objectId: number;
-  private _gestureRecorder: GestureRecorder ;
+  // private _gestureRecorder: GestureRecorder ;
 
   constructor(appInfo: AppInfoService) {
     super();
