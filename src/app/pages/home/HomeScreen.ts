@@ -278,16 +278,16 @@ export default class HomeScreen extends AbstractScreen {
       height: this._menu.height
     };
     
-    // const menuRect = LayoutUtils.fitInsideRectangle(menuSize, viewport);
-    // this._menu.x = viewport.x + menuRect.x;
-    // this._menu.y = viewport.y + menuRect.y;
-    // this._menu.width = menuRect.width;
-    // this._menu.height = menuRect.height;
-    // this._menu.onTappedBrand.add(brandSelectedArgs => {
-    //   if (brandSelectedArgs.beverage.pourItem.isDisabled === false) {
-    //     this.openBrandScreen(brandSelectedArgs);
-    //   }
-    // });
+    const menuRect = LayoutUtils.fitInsideRectangle(menuSize, viewport);
+    this._menu.x = viewport.x + menuRect.x;
+    this._menu.y = viewport.y + menuRect.y;
+    this._menu.width = menuRect.width;
+    this._menu.height = menuRect.height;
+    this._menu.onTappedBrand.add(brandSelectedArgs => {
+      if (brandSelectedArgs.beverage.pourItem.isDisabled === false) {
+        this.openBrandScreen(brandSelectedArgs);
+      }
+    });
 
     this._menuContainer.addChild(this._menu);
 
