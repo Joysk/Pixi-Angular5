@@ -149,18 +149,18 @@ export default class ParticleLayer extends Sprite {
     return false;
   }
 
-//   public destroy() {
-//     // Destroy the particles
-//     this._particles.forEach(particle => {
-//       particle.destroy();
-//     });
+  public destroy() {
+    // Destroy the particles
+    this._particles.forEach(particle => {
+      particle.destroy();
+    });
 
-//     // Destroy the particle sprite containers
-//     this._particleContainers.forEach(particleContainer => {
-//       particleContainer.destroy();
-//     });
+    // Destroy the particle sprite containers
+    this._particleContainers.forEach(particleContainer => {
+      particleContainer.destroy();
+    });
 
-//     // Remove the ticker
-//     ticker.shared.remove(this.onTick);
-//   }
-// }
+    // Remove the ticker
+    ticker.shared.remove(this.onTick);
+  }
+}
