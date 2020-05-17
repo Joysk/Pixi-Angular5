@@ -22,11 +22,11 @@
       console.log('Creating OutOfStockOverlay...');
       console.log('Current radius: ', radius);
 
-      this._transparency = .5;
-      this._radius = radius * .92;
+      // this._transparency = .5;
+      // this._radius = radius * .92;
 
-      this._container = new Sprite();
-      this.addChild(this._container);
+      // this._container = new Sprite();
+      // this.addChild(this._container);
 
       const preTitleSize = this._radius * 0.2;
       const titleSize = preTitleSize / 2;
