@@ -6,7 +6,6 @@ import {AppInfoService} from '../services/app-info.service';
 import {OutOfOrderEventArgs, Platform} from '../universal/app.types';
 import {PubSubEventArgs, PubSubTopic, SubscribeEvent, PublishEvent} from '../universal/pub-sub-types';
 import {JsUtil} from '../universal/JsUtil';
-import { GestureRecorder } from '../utils/GestureRecorder';
 
 export default class Main extends Sprite {
 

@@ -154,19 +154,19 @@ export default class MainMenu extends Sprite {
     this.redraw(false);
   }
 
-  dispatchSelectedBrand() {
-    if (this.appInfo.isAda) {
-      const index =  this.appInfo.adaNavigationService._Buttons.indexOf(this.appInfo.adaNavigationService._selectedButton);
-      const beverage = this.appInfo.ConfigurationData.pourables.pourMenu[index];
-      this._onTappedBrand.dispatch({
-        beverage,
-        rotationSpeed: this._buttons[index].rotationSpeed,
-        startRotation: this._buttons[index].currentRotation,
-        startPosition: this.toGlobal(this._buttons[index].nodeInfo.position),
-        startRadius: this._buttons[index].actualRadius
-      } as BrandSelectedArgs);
-    }
-  }
+  // dispatchSelectedBrand() {
+  //   if (this.appInfo.isAda) {
+  //     const index =  this.appInfo.adaNavigationService._Buttons.indexOf(this.appInfo.adaNavigationService._selectedButton);
+  //     const beverage = this.appInfo.ConfigurationData.pourables.pourMenu[index];
+  //     this._onTappedBrand.dispatch({
+  //       beverage,
+  //       rotationSpeed: this._buttons[index].rotationSpeed,
+  //       startRotation: this._buttons[index].currentRotation,
+  //       startPosition: this.toGlobal(this._buttons[index].nodeInfo.position),
+  //       startRadius: this._buttons[index].actualRadius
+  //     } as BrandSelectedArgs);
+  //   }
+  // }
 
   public start() {
     if (this._sequenceLayer != null) {
