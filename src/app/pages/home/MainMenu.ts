@@ -208,25 +208,25 @@ export default class MainMenu extends Sprite {
     }
   }
 
-  private createParticleLayer() {
-    const homeMenuConfig = this._platform.layout.homeMenu;
-    const particleParentItems = homeMenuConfig.items as DesignParticleParentItem[];
-    for (let i = 0; i < this._buttons.length; i++) {
-      particleParentItems[i].colors = this._buttons[
-        i
-      ].pourable.design.particlesHome.colors;
-      particleParentItems[i].designOpacity = new DesignOpacity();
-      particleParentItems[i].designOpacity.from = this._buttons[
-        i
-      ].pourable.design.particlesHome.opacity.from;
-      particleParentItems[i].designOpacity.to = this._buttons[
-        i
-      ].pourable.design.particlesHome.opacity.to;
-      particleParentItems[i].particleCount = 4;
-    }
-    this._particleLayer = new ParticleLayer(particleParentItems);
-    this._blobLayers[MainMenu.LAYER_ID_UNDER_EVERYTHING].addChild(this._particleLayer);
-  }
+  // private createParticleLayer() {
+  //   const homeMenuConfig = this._platform.layout.homeMenu;
+  //   const particleParentItems = homeMenuConfig.items as DesignParticleParentItem[];
+  //   for (let i = 0; i < this._buttons.length; i++) {
+  //     particleParentItems[i].colors = this._buttons[
+  //       i
+  //     ].pourable.design.particlesHome.colors;
+  //     particleParentItems[i].designOpacity = new DesignOpacity();
+  //     particleParentItems[i].designOpacity.from = this._buttons[
+  //       i
+  //     ].pourable.design.particlesHome.opacity.from;
+  //     particleParentItems[i].designOpacity.to = this._buttons[
+  //       i
+  //     ].pourable.design.particlesHome.opacity.to;
+  //     particleParentItems[i].particleCount = 4;
+  //   }
+  //   this._particleLayer = new ParticleLayer(particleParentItems);
+  //   this._blobLayers[MainMenu.LAYER_ID_UNDER_EVERYTHING].addChild(this._particleLayer);
+  // }
 
   private createSequenceLayer() {
     if (this._sequenceLayer) {
